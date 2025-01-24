@@ -7,7 +7,6 @@ on:
     inputs: 
       #Do Not change these values
       #Values are set by the caller
-      #caller sample: release-action-call.ymnl
       solution_name:
         description: 'The solution name.'
         type: string
@@ -52,7 +51,6 @@ on:
 jobs:
   convert-to-managed:
     runs-on: windows-latest
-    # or you can say runs-on: ubuntu-latest
     env:
       RUNNER_DEBUG: 1
 
@@ -112,6 +110,7 @@ jobs:
       with:
         name: managedSolutions
         path: ${{ inputs.solution_release_folder}}
+        
     - name: Import solution to prod env
       uses: microsoft/powerplatform-actions/import-solution@v0
       with:
