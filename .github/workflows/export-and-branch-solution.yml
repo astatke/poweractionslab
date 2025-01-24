@@ -44,12 +44,17 @@ jobs:
       with:
         lfs: true
 
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+        
     - name: Increase HttpClient Timeout
       run: |
         echo "::set-env name=GITHUB_ACTIONS_TIMEOUT::300"
 
     - name: who-am-i action
-      uses: microsoft/powerplatform-actions/who-am-i@v16
+      uses: microsoft/powerplatform-actions/who-am-i@v0
       with:
         environment-url: ${{env.ENVIRONMENT_URL}}
         app-id: ${{env.CLIENT_ID}}
