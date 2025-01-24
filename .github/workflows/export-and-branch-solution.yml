@@ -48,10 +48,10 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: '14'
-        
+
     - name: Increase HttpClient Timeout
       run: |
-        echo "::set-env name=GITHUB_ACTIONS_TIMEOUT::300"
+        echo "GITHUB_ACTIONS_TIMEOUT=300" >> $GITHUB_ENV
 
     - name: who-am-i action
       uses: microsoft/powerplatform-actions/who-am-i@v0
