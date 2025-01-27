@@ -10,7 +10,7 @@ on:
       solution_name:
         description: 'The solution name.'
         type: string
-        default: ALMLab       
+        default: ALMLab      #You need to update with the name of your solution 
       solution_shipping_folder:
         description: 'folder name for staging the exported solution *do not change*'        
         type: string
