@@ -4,7 +4,7 @@ name: Release action
 
 on:
   release:
-      types: [created]        
+    types: [created]        
 permissions:
   contents: write
 jobs:
@@ -14,11 +14,11 @@ jobs:
       #You can specify the solution name here
       solution_name: ALMLab  #Make sure you update this depending on the solution you are deploying 
       #Update your values here
-      BUILD_ENVIRONMENT_URL: 'https://org455271c4.crm.dynamics.com'
-      PRODUCTION_ENVIRONMENT_URL: 'https://orgfb2ab5cd.crm.dynamics.com'
-      CLIENT_ID: '1777ef69-b85d-497e-baac-304295480aae'
-      CLIENT_ID_PROD: '1777ef69-b85d-497e-baac-304295480aae'
-      TENANT_ID: '0d3c88a9-1599-400d-b468-fb8d6f92e5d4'     
+      BUILD_ENVIRONMENT_URL: https://org455271c4.crm.dynamics.com
+      PRODUCTION_ENVIRONMENT_URL: https://orgfb2ab5cd.crm.dynamics.com
+      CLIENT_ID: 1777ef69-b85d-497e-baac-304295480aae
+      CLIENT_ID_PROD: 1777ef69-b85d-497e-baac-304295480aae
+      TENANT_ID: 0d3c88a9-1599-400d-b468-fb8d6f92e5d4     
     secrets:
       envSecret: ${{ secrets.PowerPlatformSPN }}
       envSecretProd: ${{ secrets.PowerPlatformSPNPROD }}
